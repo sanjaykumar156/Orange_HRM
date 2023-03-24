@@ -16,7 +16,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public ResourceBundle rb;
 	
-	@BeforeClass(groups= {"sanity","regression"})
+	@BeforeClass(groups= {"sanity","regression" , "functional"})
 	@Parameters({"browser"})
 	public void setup (String br) {
 		rb= ResourceBundle.getBundle("config");

@@ -9,8 +9,8 @@
 	<test thread-count="5" name="masterTest">
 		<classes>
 			
-			<class name="testcases.Oc_001login" />
-			<class name="testcases.Oc_001ddtlogin" />
+			<class name="testcases.AdminClass" />
+			
 			
 			
 		</classes>
