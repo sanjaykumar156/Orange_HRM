@@ -1,5 +1,7 @@
 package testcases;
 
+import static org.testng.Assert.fail;
+
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -11,9 +13,9 @@ import pageobjects.HomePage;
 import pageobjects.LoginPage;
 import testbase.BaseClass;
 
-public class AdminClass extends BaseClass {
+public class Oc_003AdminClass extends BaseClass {
 
-	@Test
+	@Test(groups = {"functional"})
 	public void adminprofile() throws InterruptedException {
 		LoginPage lp = new LoginPage(driver);
 		Thread.sleep(4000);
@@ -59,9 +61,21 @@ public class AdminClass extends BaseClass {
 		}
 		
 		ap.username("sanjaykumar");
+		Thread.sleep(7000);
 		ap.password(rb.getString("password1"));
 		ap.conformpswd(rb.getString("password1"));
+		Thread.sleep(1000);
 		ap.savebtn();
+		String expected =  "System Users";
+		String actual = ap.text("System Users");
+		if(expected.equals(actual)) {
+			Assert.assertTrue(true);
+		}else {
+			Assert.fail();
+		}
+		
+		
+		
 		
 	}
 

@@ -51,6 +51,9 @@ public class AdminPage extends BasePage{
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement saveclk;
 	
+	@FindBy (xpath ="//h5[normalize-space()='System Users']")
+	WebElement textcheck;
+	
 	//methods 
 	
 	public void admin() {
@@ -98,5 +101,10 @@ public class AdminPage extends BasePage{
 	public void savebtn() {
 		saveclk.click();
 	
+	}
+	
+	public String text(String t) {
+		textcheck.sendKeys(t);
+		return t;
 	}
 }

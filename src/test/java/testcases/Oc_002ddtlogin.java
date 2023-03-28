@@ -8,7 +8,7 @@ import pageobjects.HomePage;
 import pageobjects.LoginPage;
 import testbase.BaseClass;
 
-public class Oc_001ddtlogin extends BaseClass {
+public class Oc_002ddtlogin extends BaseClass {
 	
 	@Test(dataProvider = "orange", groups = {"regression"}, priority =2)
 	public void loginddt(String user ,String pswd,String exp) {

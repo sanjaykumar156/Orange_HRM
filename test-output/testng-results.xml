@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-24T20:41:27 IST" name="masterSuite" finished-at="2023-03-24T20:43:44 IST" duration-ms="137026">
+  <suite started-at="2023-03-28T20:29:46 IST" name="masterSuite" finished-at="2023-03-28T20:31:09 IST" duration-ms="83078">
     <groups>
     </groups>
-    <test started-at="2023-03-24T20:41:27 IST" name="masterTest" finished-at="2023-03-24T20:43:44 IST" duration-ms="137026">
-      <class name="testcases.AdminClass">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcases.AdminClass@6d3a388c]" started-at="2023-03-24T20:41:28 IST" name="setup" finished-at="2023-03-24T20:41:55 IST" duration-ms="26265" status="PASS">
+    <test started-at="2023-03-28T20:29:46 IST" name="masterTest" finished-at="2023-03-28T20:31:09 IST" duration-ms="83078">
+      <class name="testcases.Oc_005leave">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcases.Oc_005leave@50ad3bc1]" started-at="2023-03-28T20:29:46 IST" name="setup" finished-at="2023-03-28T20:30:15 IST" duration-ms="29157" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,60 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="adminprofile()[pri:0, instance:testcases.AdminClass@6d3a388c]" started-at="2023-03-24T20:41:55 IST" name="adminprofile" finished-at="2023-03-24T20:43:44 IST" duration-ms="109418" status="PASS">
+        <test-method signature="leaveclass()[pri:0, instance:testcases.Oc_005leave@50ad3bc1]" started-at="2023-03-28T20:30:15 IST" name="leaveclass" finished-at="2023-03-28T20:31:09 IST" duration-ms="53792" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 11 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 11 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:40)
+at jdk.proxy2/jdk.proxy2.$Proxy21.get(Unknown Source)
+at testcases.Oc_005leave.leaveclass(Oc_005leave.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- adminprofile -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.AdminClass@6d3a388c]" started-at="2023-03-24T20:43:44 IST" name="teardown" finished-at="2023-03-24T20:43:44 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- leaveclass -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.Oc_005leave@50ad3bc1]" started-at="2023-03-28T20:31:09 IST" name="teardown" finished-at="2023-03-28T20:31:09 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testcases.AdminClass -->
+      </class> <!-- testcases.Oc_005leave -->
     </test> <!-- masterTest -->
   </suite> <!-- masterSuite -->
 </testng-results>

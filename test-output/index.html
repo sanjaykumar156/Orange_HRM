@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-masterSuite" class="navigator-link">
-              <span class="suite-name border-passed">masterSuite</span>
+              <span class="suite-name border-failed">masterSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-masterSuite" class="hide-methods passed suite-masterSuite"> (hide)</a> <!-- hide-methods passed suite-masterSuite -->
-                      <a href="#" panel-name="suite-masterSuite" class="show-methods passed suite-masterSuite"> (show)</a> <!-- show-methods passed suite-masterSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-masterSuite" class="hide-methods failed suite-masterSuite"> (hide)</a> <!-- hide-methods failed suite-masterSuite -->
+                      <a href="#" panel-name="suite-masterSuite" class="show-methods failed suite-masterSuite"> (show)</a> <!-- show-methods failed suite-masterSuite -->
                     </span>
-                    <div class="method-list-content passed suite-masterSuite">
+                    <div class="method-list-content failed suite-masterSuite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testcases.AdminClass" class="method navigator-link" hash-for-method="adminprofile">adminprofile</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-masterSuite" title="testcases.Oc_005leave" class="method navigator-link" hash-for-method="leaveclass">leaveclass</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-masterSuite -->
+                    </div> <!-- method-list-content failed suite-masterSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-masterSuite" class="panel masterSuite">
-          <div class="suite-masterSuite-class-passed">
+          <div class="suite-masterSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.AdminClass</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.Oc_005leave</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="adminprofile">
-                  </a> <!-- adminprofile -->
-                  <span class="method-name">adminprofile</span>
+                  <a name="leaveclass">
+                  </a> <!-- leaveclass -->
+                  <span class="method-name">leaveclass</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 11 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:40)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.get(Unknown Source)
+	at testcases.Oc_005leave.leaveclass(Oc_005leave.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-masterSuite-class-passed -->
+          </div> <!-- suite-masterSuite-class-failed -->
         </div> <!-- panel masterSuite -->
         <div panel-name="test-xml-masterSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -143,12 +155,9 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;masterSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;masterTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.AdminClass&quot;/&gt;
+      &lt;class name=&quot;testcases.Oc_005leave&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- masterTest --&gt;
 &lt;/suite&gt; &lt;!-- masterSuite --&gt;
@@ -190,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'adminprofile')
-data.setCell(0, 2, 'testcases.AdminClass')
-data.setCell(0, 3, 109418);
+data.setCell(0, 1, 'leaveclass')
+data.setCell(0, 2, 'testcases.Oc_005leave')
+data.setCell(0, 3, 53792);
 window.suiteTableData['masterSuite']= { tableData: data, tableDiv: 'times-div-masterSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 53 seconds</span>
               <div id="times-div-masterSuite">
               </div> <!-- times-div-masterSuite -->
             </div> <!-- times-div -->
@@ -223,18 +232,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.AdminClass</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.Oc_005leave</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">adminprofile</span>
-                <span class="method-start">26283 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">leaveclass</span>
+                <span class="method-start">29199 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">135788 ms</span>
+                <span class="method-start">83029 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
