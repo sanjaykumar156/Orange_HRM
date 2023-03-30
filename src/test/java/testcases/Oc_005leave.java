@@ -68,7 +68,7 @@ public class Oc_005leave extends BaseClass{
 		wait2.until(ExpectedConditions.visibilityOfAllElements(date));
 		
 		for(int k=0; k<date.size(); k++) {
-			if(date.get(k).getText().equals("4")) {
+			if(date.get(k).getText().equals("29")) {
 				date.get(k).click();
 			}
 		}

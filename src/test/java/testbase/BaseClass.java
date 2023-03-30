@@ -36,7 +36,7 @@ public class BaseClass {
 	
 	@AfterClass
 	public void teardown() {
-//		driver.quit();
+		driver.quit();
 	}
 	
 }

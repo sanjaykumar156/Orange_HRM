@@ -20,7 +20,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-public class ExtentReportManager implements ITestListener {
+public class ExtentReportManager extends TestUtilities implements ITestListener {
 	
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
@@ -57,13 +57,14 @@ public class ExtentReportManager implements ITestListener {
 		test = extent.createTest(result.getName());
 		test.log(Status.FAIL, "Test Failed");
 		test.log(Status.FAIL, result.getThrowable().getMessage());
+		try {
+			getscreenshot();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 
-//		try {
-//			String imgPath = new BaseClass().captureScreen(result.getName());
-//			test.addScreenCaptureFromPath(imgPath);
-//		} catch (IOException e1) {
-//			e1.printStackTrace();
-//		}
+
 	}
 
 	public void onTestSkipped(ITestResult result) {

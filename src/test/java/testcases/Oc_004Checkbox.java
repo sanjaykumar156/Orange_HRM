@@ -41,7 +41,7 @@ public class Oc_004Checkbox extends BaseClass {
 			
 		}
 		
-		cp.deleteclick();
+//		cp.deleteclick();
 	}
 
 }
