@@ -4,15 +4,15 @@
 	<listeners>
 		<listener class-name="utilities.ExtentReportManager" />
 	</listeners>
-	
 	<parameter name="browser" value="edge" />
 	<test thread-count="5" name="masterTest">
 		<classes>
-			
+			<class name="testcases.Oc_001login" />
+			<class name="testcases.Oc_002ddtlogin" />
+			<class name="testcases.Oc_003AdminClass" />
 			<class name="testcases.Oc_004Checkbox" />
-			
-			
-			
+			<class name="testcases.Oc_005leave" />
+			<class name="testcases.Oc_006Myinfo" />
 		</classes>
 	</test> <!-- masterTest -->
 </suite> <!-- masterSuite -->

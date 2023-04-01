@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-30T10:42:29 IST" name="masterSuite" finished-at="2023-03-30T10:43:12 IST" duration-ms="43105">
+  <suite started-at="2023-04-01T11:04:29 IST" name="masterSuite" finished-at="2023-04-01T11:06:03 IST" duration-ms="94414">
     <groups>
     </groups>
-    <test started-at="2023-03-30T10:42:29 IST" name="masterTest" finished-at="2023-03-30T10:43:12 IST" duration-ms="43105">
-      <class name="testcases.Oc_004Checkbox">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcases.Oc_004Checkbox@193f604a]" started-at="2023-03-30T10:42:29 IST" name="setup" finished-at="2023-03-30T10:42:58 IST" duration-ms="28484" status="PASS">
+    <test started-at="2023-04-01T11:04:29 IST" name="masterTest" finished-at="2023-04-01T11:06:03 IST" duration-ms="94414">
+      <class name="testcases.Oc_006Myinfo">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcases.Oc_006Myinfo@193f604a]" started-at="2023-04-01T11:04:29 IST" name="setup" finished-at="2023-04-01T11:05:10 IST" duration-ms="40960" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkbox()[pri:0, instance:testcases.Oc_004Checkbox@193f604a]" started-at="2023-03-30T10:42:58 IST" name="checkbox" finished-at="2023-03-30T10:43:10 IST" duration-ms="12398" status="PASS">
+        <test-method signature="myinfopage()[pri:0, instance:testcases.Oc_006Myinfo@193f604a]" started-at="2023-04-01T11:05:10 IST" name="myinfopage" finished-at="2023-04-01T11:06:03 IST" duration-ms="52942" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkbox -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.Oc_004Checkbox@193f604a]" started-at="2023-03-30T10:43:10 IST" name="teardown" finished-at="2023-03-30T10:43:12 IST" duration-ms="1686" status="PASS">
+        </test-method> <!-- myinfopage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.Oc_006Myinfo@193f604a]" started-at="2023-04-01T11:06:03 IST" name="teardown" finished-at="2023-04-01T11:06:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testcases.Oc_004Checkbox -->
+      </class> <!-- testcases.Oc_006Myinfo -->
     </test> <!-- masterTest -->
   </suite> <!-- masterSuite -->
 </testng-results>

@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="masterTest(failed)">
     <classes>
-      <class name="testcases.Oc_004Checkbox">
+      <class name="testcases.Oc_006Myinfo">
         <methods>
           <include name="teardown"/>
-          <include name="checkbox"/>
           <include name="setup"/>
+          <include name="myinfopage"/>
         </methods>
-      </class> <!-- testcases.Oc_004Checkbox -->
+      </class> <!-- testcases.Oc_006Myinfo -->
     </classes>
   </test> <!-- masterTest(failed) -->
 </suite> <!-- Failed suite [masterSuite] -->
